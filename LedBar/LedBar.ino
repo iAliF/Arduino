@@ -1,7 +1,11 @@
 // Led Pins
-const int leds[] = {4, 5, 6, 7}; // Pins
-const int ledsCount = 4; // Leds count
-int currentLed = 0; // where to start
+const int leds[] = {4, 5, 6, 7};
+// Leds count
+const int ledsCount = 4;
+// Where to start the loop (index)
+int currentLed = 0;
+// Delay
+const int mDelay = 250;
 
 void setup() {
   for (int i = 0; i < ledsCount; i++) {
@@ -16,5 +20,5 @@ void loop() {
 
   currentLed = currentLed == ledsCount - 1 ? 0 : currentLed + 1;
 
-  delay(100);
+  delay(mDelay);
 }
